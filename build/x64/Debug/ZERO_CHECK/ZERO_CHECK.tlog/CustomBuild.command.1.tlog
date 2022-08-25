@@ -1,0 +1,10 @@
+^C:\USERS\USER\DESKTOP\PROGRAMMING\CPLAY\BUILD\CMAKEFILES\3199D0B54BD947F36BA780DB3D0E9E8D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/user/Desktop/programming/cPlay -BC:/Users/user/Desktop/programming/cPlay/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/user/Desktop/programming/cPlay/build/cplay.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
