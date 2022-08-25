@@ -67,10 +67,7 @@ void close(){
     // free gKeyPressSurfaces
     for(int i = 0; i < KEY_PRESS_SURFACE_TOTAL; i++)
     {
-        if(gKeyPressSurfaces[i] != NULL)
-        {
-            SDL_FreeSurface(gKeyPressSurfaces[i]);
-        }
+        SDL_FreeSurface(gKeyPressSurfaces[i]);
     }
 
     //Deallocate surface
@@ -122,7 +119,7 @@ int main( int argc, char* args[] )
             // user requesting to quit
             if (e.type == SDL_QUIT)
             {
-                close();
+                quit = true;
             }
 
             // user presses a key
@@ -159,7 +156,6 @@ int main( int argc, char* args[] )
     }
 
     // free resources close SDL
-    SDL_FreeSurface(current_surface);
     close();
 
     return 0;
